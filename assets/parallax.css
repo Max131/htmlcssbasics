@@ -1,0 +1,83 @@
+
+html {scroll-behavior: smooth;box-sizing:border-box;}
+body{font-family: 'Nunito';margin: 0;}
+h1 {
+    min-height: 100vh;
+    color:darkgray;
+    padding:1rem;
+    font-size: 10vh;
+    text-align: center;
+}
+
+.parallax1, .parallax2, .parallax3 {
+    min-height: 100vh; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1{background-image: url('fan.jpg');}
+
+.parallax2{background-image: url('girl.jpg');clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);  }
+
+.parallax3{background-image: url('log.jpg');}
+
+nav{
+    min-width: 90%;
+    /* background-color: black; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav a{
+        background-color: slateblue;
+        color:white;
+        display: inline-block;
+        min-width: 30%;
+        text-align: center;
+    }
+
+.overlay{
+    background-color: black;
+    position: fixed;
+    z-index: -100;
+    opacity: .5;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fullscreen-container {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+overflow: hidden;
+z-index: -100;
+/* opacity: .5; */
+}
+
+.fullscreen-video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+}
+
+@media (min-aspect-ratio: 16/9) {
+.fullscreen-video {
+height: auto;
+width: 100%;
+}
+}
+
+@media (max-aspect-ratio: 16/9) {
+.fullscreen-video {
+height: 100%;
+width: auto;
+}
+}
