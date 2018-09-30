@@ -10,4 +10,7 @@ HTML + CSS Basic examples.
   
 [Max131 Repositorie](https://github.com/Max131/htmlcssbasics)
 *****
-
+  
+  
+All images and videos are from [Pixabay](https://pixabay.com/)
+  
