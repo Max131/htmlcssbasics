@@ -73,7 +73,7 @@ p{
     margin: 2rem
 }
 
-.parallax1, .parallax2, .parallax3 {
+.parallax1, .parallax2, .parallax3, .parallax4 {
     min-height: 100vh; 
     background-attachment: fixed;
     background-position: center;
@@ -84,6 +84,7 @@ p{
 .parallax1{background-image: url('fan.jpg');}
 .parallax2{background-image: url('girl.jpg');}
 .parallax3{background-image: url('log.jpg');clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);}
+.parallax4{background-image: url('cabains.jpg');}
 
 .letterpress{
     /* color: black;
@@ -107,6 +108,7 @@ nav a{
         min-width: 30%;
         text-align: center;
         margin:5px;
+        border-radius: 4px;
     }
 
 
