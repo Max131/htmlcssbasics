@@ -51,7 +51,7 @@ opacity: .1;
 }
 
 .container {
-    height: 100vh;
+    min-height: 100vh;
     
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@ opacity: .1;
 }
 
 .container:first-of-type{
-    height: 91.35vh;
+    min-height: 86vh;
 }
 
 h1{
@@ -87,8 +87,6 @@ p{
 .parallax4{background-image: url('cabains.jpg');}
 
 .letterpress{
-    /* color: black;
-    text-shadow: 0px 1px 2px #555; */
     color: grey;
     text-shadow: 0px 1px 2px black;
 }
@@ -121,11 +119,77 @@ nav a{
     }
 
 nav a:hover{
-    /*width: 8rem;*/
-    /*border-radius: 1.5rem;*/
-    /*box-shadow: 0 0 0 2px lightgray, 0px 0px 4px 4px black;*/
+    
 }
 
+.flex-gal{
+    text-align: center;
+    width: 100vw;
+}
+label{
+    margin: 1rem;
+    padding: .5rem;
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+}
+
+#gal-rr:checked ~ .gallery {
+    flex-direction: row-reverse;
+}
+
+#gal-c:checked ~ .gallery {
+    flex-direction: column;
+    align-items: center;
+}
+
+#gal-cr:checked ~ .gallery {
+    flex-direction: column-reverse;
+    align-items: center;
+
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"]:checked+label{
+    border-color: red;
+}
+
+
+.flex-sel{
+    flex-direction: row;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    max-height: 470px;
+    margin: 1rem auto;
+    transition: .5s;
+}
+
+.gallery img{
+    width: 150w;
+    height: 133px;
+    max-width: 100%;
+    max-height: auto;
+    margin: 10px;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+}
+
+.gallery img:hover{
+    box-shadow: 0 0 4px 8px #00000050;
+    cursor: pointer;
+    transform: scale(2);
+}
 
 @media (min-aspect-ratio: 16/9) {
 .bg-video {
