@@ -16,6 +16,16 @@ body{
     font-weight: 100;
 }
 
+#up-menu{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 10vh;
+}
+
 .video-container {
 background: #2c2c2c url('bg.png') repeat;
 position: absolute;
@@ -57,10 +67,6 @@ opacity: .1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.container:first-of-type{
-    min-height: 86vh;
 }
 
 h1{
