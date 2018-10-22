@@ -16,54 +16,6 @@ body{
     font-weight: 100;
 }
 
-.video-container {
-background: #2c2c2c url('bg.png') repeat;
-position: absolute;
-height: 100%;
-width: 100%;
-overflow: hidden;
-z-index: -100;
-}
-
-.bg-video {
-width: 100%;
-height: 100%;
-opacity: .1;
-}
-
-.back-up{
-    width: 3rem;
-    height: 3rem;
-    background-color: lightgray;
-    font-size: 2rem;
-    text-align: center;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 100;
-    transition: .25s;
-}
-
-.back-up a{
-    color:black;
-    text-decoration: none;
-    display: block;
-    outline: none;
-}
-
-.back-up:hover{
-    box-shadow: 0 0 4px 10px #00000050;
-}
-
-.container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 h1{
     color: white;
     font-size: 10vh;
@@ -73,25 +25,19 @@ h1{
 p{
     margin: 2rem
 }
-
-.parallax1, .parallax2, .parallax3, .parallax4 {
-    background: #2c2c2c url() no-repeat fixed center;
-    background-size: cover;
+.video-container {
+    background: #2c2c2c url('bg.png') repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -100;
 }
 
-.parallax1{background-image: url('fan.jpg');}
-.parallax2{background-image: url('girl.jpg');}
-.parallax3{background-image: url('log.jpg');clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);}
-.parallax4{background-image: url('cabains.jpg');}
-
-.letterpress{
-    color: grey;
-    text-shadow: 1px 1px 2px black;
-}
-
-.letterpress2{
-    color: #1a1a1a;
-    text-shadow: 1px 1px 0px #444;
+.bg-video {
+width: 100%;
+height: 100%;
+opacity: .1;
 }
 
 .nav-menu{
@@ -152,9 +98,61 @@ p{
     z-index: 100;
 }
 
-nav a:hover{
-    
+.back-up{
+    width: 3rem;
+    height: 3rem;
+    background-color: lightgray;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+    transition: .25s;
 }
+
+.back-up a{
+    color:black;
+    text-decoration: none;
+    display: block;
+    outline: none;
+}
+
+.back-up:hover{
+    box-shadow: 0 0 4px 10px #00000050;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.parallax1, .parallax2, .parallax3, .parallax4 {
+    background: #2c2c2c url() no-repeat fixed center;
+    background-size: cover;
+}
+
+.parallax1{background-image: url('fan.jpg');}
+.parallax2{background-image: url('girl.jpg');}
+.parallax3{background-image: url('log.jpg');clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);}
+.parallax4{background-image: url('cabains.jpg');}
+
+.letterpress{
+    color: grey;
+    text-shadow: 1px 1px 2px black;
+}
+
+.letterpress2{
+    color: #1a1a1a;
+    text-shadow: 1px 1px 0px #444;
+}
+
+/* Flexbox Gallery */
 
 .flex-gal{
     width: 100%;
@@ -165,10 +163,9 @@ nav a:hover{
 }
 
 label{
-    margin: 1rem 5rem 1rem;
+    margin: 1rem 5rem;
     padding: .5rem;
     display: inline-block;
-    border-radius: 50%;
     cursor: pointer;
     height: 3rem;
     position: relative;
@@ -183,6 +180,19 @@ label:before{
     position: absolute;
     left: -1.25rem;
     top: .8rem;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"]:checked+label:before{
+    background-color: gray;
+    border: 2px solid lightgray;
+}
+
+#gal-r:checked ~ .gallery {
+    flex-direction: row;
 }
 
 #gal-rr:checked ~ .gallery {
@@ -200,24 +210,9 @@ label:before{
 
 }
 
-input[type="radio"]{
-    display: none;
-}
-
-input[type="radio"]:checked+label{
-    border-color: red;
-}
-
-input[type="radio"]:checked+label:before{
-    background-color: gray;
-    border: 2px solid lightgray;
-}
-
-
 .gallery{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
     width: 50%;
     max-height: 500px;
@@ -254,9 +249,7 @@ width: auto;
 height: 100%;
 }
 
-.container:first-of-type{
-    justify-content: flex-end;
-}
+
 
 }
 
@@ -270,4 +263,26 @@ h1{
     font-size: 3rem;
 }
 
+.a-menu{
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.flex-gal{
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    max-height: 40%;
+}
+
+.gallery{
+    width: 100%;
+    display: flex;
+    flex-flow: column-wrap;
+    height: 40%;
+}
+
+.gallery img{
+    width: 75px;
+    height: auto;
+}
 }
