@@ -59,6 +59,14 @@ label{
 	font-size: 2.5rem;
 	padding-left: 1rem;
 	cursor: pointer;
+	position: relative;
+}
+
+label:after{
+	content: "\02261";
+	position: absolute;
+	left: -.5rem;
+	transition: .25s;
 }
 	@media (max-width: 360px){
 			/* details{
@@ -100,8 +108,12 @@ label{
 }
 
 
+.cbmenu:checked + label::after{
+	color: red;
+	content: "\000D7";
+	position: absolute;
 
-}
+}}
 
 	</style>
   </head>
@@ -117,8 +129,8 @@ label{
 		</details> -->
 
 		<nav>
-			<label for="cmenu" class="lcbmenu" >&equiv;</label>
 			<input type="checkbox" id="cmenu" class="cbmenu" />
+			<label for="cmenu" class="lcbmenu" ></label>
 			<ul class="m">
 					<li><a href="">One</a></li>
 					<li><a href="">Two</a></li>
