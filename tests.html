@@ -2,29 +2,150 @@
 <html>
   <head>
     <title>Tesgin</title>
-    <meta charset="utf-8">
-    <style>
-    *, *:before, *:after{
-    	margin:0;
-    	padding: 0;
-    	box-sizing: border-box;
-    }
-	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet" /> 
+	<style>
+	*, *:before, *:after{
+		margin:0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+		
+	html{
+		font-family: 'Source Sans Pro', Helvetica, sans-serif;
+		font-size: 20px;
+	}
+
 	body
 	{
 		background-color: #222;
 		color: white;
 	}
+
+	details{
+		transition: 2s;
+	}
+
+	summary{
+		cursor: pointer;
+		list-style: none;
+		font-size: 2rem;
+		display: none;
+	}
+
+	a{
+		color: darkolivegreen;
+		text-decoration: none;
+		display: block;
+		font-weight: bold;
+	}
+
+	li{
+		display: inline-block;
+		padding: .5rem;
+	}
+
+
+.lcbmenu{
+	display: none;
+}
+
+.cbmenu{
+	display: none;
+}
+
+label{
+	font-size: 2.5rem;
+	padding-left: 1rem;
+	cursor: pointer;
+}
+	@media (max-width: 360px){
+			/* details{
+				position: absolute;
+				top: 0;
+				left: 1rem;
+			}
+
+			summary{
+				display: block;
+			}
+
+			li{
+				display: block;
+			} */
+	.lcbmenu{
+		display: inline-block;
+		position: fixed;
+		right: 1rem;;
+		
+	}
+
+	.m{
+		position: fixed;
+		left: -70%;
+		width: 70%;
+		height: 100%;
+		background-color: white;
+		border-right: .5rem solid bisque;
+		transition: .5s ease-in-out;
+	}
+
+	.m li{
+	display: block;
+}
+
+.cbmenu:checked ~ .m{
+	left: 0;
+}
+
+
+
+}
+
 	</style>
   </head>
   <body>
-  	<details>
-  		<summary><h1>Hello</h1></summary>
-  		
-			<h1>Good bye</h1>
-			<h1>Firefox</h1>
-			<h1>Arch</h1>
-		
-	</details>
-  </body>
+  	<!-- <details open>
+			<summary>&#x2261;</summary>
+			<ul>
+				<li><a href="">One</a></li>
+				<li><a href="">Two</a></li>
+				<li><a href="">Three</a></li>
+				<li><a href="">Four</a></li>
+			</ul>
+		</details> -->
+
+		<nav>
+			<label for="cmenu" class="lcbmenu" >&equiv;</label>
+			<input type="checkbox" id="cmenu" class="cbmenu" />
+			<ul class="m">
+					<li><a href="">One</a></li>
+					<li><a href="">Two</a></li>
+					<li><a href="">Three</a></li>
+					<li><a href="">Four</a></li>
+			</ul>
+		</nav>
+
+		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores corporis omnis nihil vero quia quod quae autem quam, magnam, in a recusandae facere cupiditate nulla nesciunt! Illum expedita dolorum et!
+		Vero tempore rerum eum quis eius? Perferendis dolorum porro velit consequatur provident aspernatur illum officiis dignissimos magni incidunt possimus quaerat, ducimus corporis dolorem minus nostrum itaque perspiciatis neque fuga tempore?
+		Aspernatur dolorum sit est veniam. Facilis rerum temporibus voluptatum cum tenetur quasi, laboriosam culpa similique, sunt reiciendis non mollitia ut id aut minima amet. Consequuntur fuga molestiae vero soluta accusantium!
+		Iste labore cumque quasi nobis hic, quam, recusandae commodi modi dolores magni laudantium, consequatur et aperiam iure optio corrupti. Delectus facilis eveniet perferendis quod consequatur nihil eaque, amet aspernatur maxime?
+		Voluptatem enim cum commodi ducimus similique, beatae dolorem earum iure mollitia debitis nihil quibusdam temporibus dicta tempore velit neque ab omnis asperiores nemo. Sequi qui ducimus, molestiae architecto sunt in?
+		Nulla mollitia sequi laudantium atque expedita saepe soluta voluptates, nam, dolorem eveniet eos adipisci debitis est culpa enim? Earum voluptas rem molestias dolores consectetur dicta quibusdam modi, laborum deserunt incidunt.
+		Pariatur tempora debitis inventore repellat labore officiis ducimus eaque eos reiciendis quae quos at in, est facilis nam officia doloribus dolorem culpa laborum voluptatibus quas. Beatae voluptatibus exercitationem maiores omnis.
+		Neque eligendi, totam maiores voluptatum rem sint recusandae optio tenetur aliquid! Dignissimos asperiores ut itaque maxime. Aliquam dolorem, voluptatum et fugiat consectetur facere sint cupiditate maiores ducimus itaque voluptas eaque.
+		Unde laboriosam dolor culpa? Maxime amet atque quaerat hic aperiam reprehenderit similique iste eveniet in asperiores perspiciatis repudiandae aspernatur magnam veritatis a consequuntur, vero modi delectus. Assumenda incidunt amet labore.
+		Magnam, ratione suscipit laboriosam voluptas iure animi officia, hic quaerat ex, aperiam harum molestiae similique porro! Suscipit, excepturi vitae dicta iure sunt nihil, dolore dignissimos odit est, sit ipsa hic?
+		Amet saepe possimus dolor vel, asperiores quam aperiam! Voluptatem laudantium repudiandae eum recusandae debitis assumenda eveniet odio explicabo qui dolorum quas repellendus ad iste nemo perspiciatis labore hic, consequuntur alias.
+		Qui reprehenderit distinctio hic quas odio, inventore repellendus officia mollitia amet velit dicta aperiam eaque aspernatur libero nisi, sed placeat corporis. Eius sint deserunt repellat dolores facilis quibusdam quidem necessitatibus.
+		Reprehenderit velit laudantium nulla eaque porro, ut possimus atque magnam perferendis rem blanditiis excepturi dolore natus veritatis, corporis dicta ratione necessitatibus. Minima eligendi, maiores voluptas eum inventore necessitatibus vel minus.
+		Tenetur alias, culpa in dignissimos accusantium qui iure exercitationem excepturi quo eveniet praesentium facilis, expedita obcaecati ducimus. Modi earum, doloribus id, exercitationem deserunt adipisci tenetur tempore quidem sed laudantium inventore.
+		Quisquam odit soluta atque dolorem suscipit totam nisi, voluptatem voluptates nostrum, repudiandae odio, nemo iure optio vel. Magni doloribus perspiciatis aspernatur quisquam nostrum id pariatur odio autem, modi at deleniti.
+		Ut maxime fuga sequi molestias vero asperiores doloremque rerum, omnis pariatur. Commodi obcaecati doloremque tempora eaque nisi architecto dolore magni, molestias aut excepturi culpa reprehenderit est illum maiores non sapiente.
+		Ratione quod esse vel atque fugit consequuntur, perferendis magni sit nemo sapiente reprehenderit maxime necessitatibus sunt totam. Facilis pariatur dolor, at cumque, quibusdam sequi enim beatae iure corrupti iusto omnis.
+		Veritatis aut praesentium ipsam. Praesentium nam et autem aut esse debitis facilis corporis corrupti, dolor, rerum harum aliquid fugiat. Exercitationem perferendis labore totam error reiciendis quasi corrupti sint repellat eos!
+		Nobis quia tempora architecto iste asperiores totam accusantium. Vitae facere sint, eaque quae, quasi totam iure obcaecati nihil facilis labore incidunt aperiam explicabo? Consequuntur rem error vel dolor ullam voluptatem.
+		Mollitia aut velit nam facilis nesciunt neque esse expedita qui incidunt dolorum, consequuntur alias nulla assumenda distinctio magnam. Dicta voluptate ipsum neque aliquid optio odit aliquam tempore natus possimus sit?
+	</body>
 </html>
