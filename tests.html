@@ -21,6 +21,7 @@
 	{
 		background-color: #222;
 		color: white;
+		padding: 1rem;
 	}
 
 	details{
@@ -66,7 +67,9 @@ label:after{
 	content: "\02261";
 	position: absolute;
 	left: -.5rem;
+	top: -1rem;
 	transition: .25s;
+	color:orange;
 }
 	@media (max-width: 360px){
 			/* details{
@@ -110,9 +113,11 @@ label:after{
 
 .cbmenu:checked + label::after{
 	color: red;
+	left: -.5rem;
+	top: -.7rem;
 	content: "\000D7";
 	position: absolute;
-
+	transform: rotate(90deg);
 }}
 
 	</style>
