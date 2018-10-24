@@ -40,14 +40,16 @@ height: 100%;
 opacity: .1;
 }
 
-.toggle-menu{
+.toggle-menu::before{
+    content: "\2261";
     font-size: 4rem;
     line-height: .75;
     position: fixed;
-    top: -1rem;
-    right: 0;
+    top: 1rem;
+    right: 1rem;
     cursor: pointer;
     z-index: 100;
+    transition: .25s;
 }
 
 .toggle-menu-c{
@@ -292,6 +294,12 @@ h1{
     left: 0;
 }
 
+.toggle-menu-c:checked + .toggle-menu:before{
+    content: "\02a2f";
+    color: red;
+    transform: rotate(180deg);
+
+}
 
 .nav-menu{
     flex-direction: column wrap;
@@ -316,22 +324,16 @@ h1{
 
 .nav-menu li:hover{
     background: lightgray;
+    border-radius: .25rem;
 }
 
 .a-menu{
-    border-radius: 0;
-    /* display: inline-block; */
     width: 100%;
     justify-content: flex-start;
     box-shadow: none;
     border: none;
     background: none;
 }
-
-/* .a-menu::before{
-    content: "\02192";
-
-} */
 
 .tooltip{
     position: static;

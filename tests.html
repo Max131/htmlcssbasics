@@ -71,6 +71,10 @@ label:after{
 	transition: .25s;
 	color:orange;
 }
+
+.m{
+	padding-left: 1rem;
+}
 	@media (max-width: 360px){
 			/* details{
 				position: absolute;
@@ -104,6 +108,8 @@ label:after{
 
 	.m li{
 	display: block;
+	list-style-type: decimal;
+
 }
 
 .cbmenu:checked ~ .m{
@@ -136,12 +142,12 @@ label:after{
 		<nav>
 			<input type="checkbox" id="cmenu" class="cbmenu" />
 			<label for="cmenu" class="lcbmenu" ></label>
-			<ul class="m">
+			<ol class="m">
 					<li><a href="">One</a></li>
 					<li><a href="">Two</a></li>
 					<li><a href="">Three</a></li>
 					<li><a href="">Four</a></li>
-			</ul>
+			</ol>
 		</nav>
 
 		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores corporis omnis nihil vero quia quod quae autem quam, magnam, in a recusandae facere cupiditate nulla nesciunt! Illum expedita dolorum et!
