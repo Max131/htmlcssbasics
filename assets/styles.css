@@ -40,6 +40,22 @@ height: 100%;
 opacity: .1;
 }
 
+.toggle-menu{
+    font-size: 4rem;
+    line-height: .75;
+    position: fixed;
+    top: -1rem;
+    right: 0;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.toggle-menu-c{
+    display: none;
+}
+
+
+
 .nav-menu{
     padding: 1rem;
     display: flex;
@@ -51,22 +67,31 @@ opacity: .1;
     right: 0;
 }
 
+.nav-menu ul{
+    list-style-type: none;
+}
+
+.nav-menu li{
+    display: inline-block;
+    padding: 0;
+    margin: .8rem;
+}
+
 .a-menu{
         background-color: lightgray;
         color: black;
         display: inline-block;
         width: 3rem;
         height: 3rem;
+        margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 1rem;
         border-radius: 50%;
         text-decoration: none;
         border: 1px dashed black;
         box-shadow: 0 0 0 2px lightgray;
         outline: none;
-        transition: .25s;
         position: relative;
     }
 
@@ -162,7 +187,7 @@ opacity: .1;
     max-height: 65vh;
 }
 
-label{
+.flex-gal label{
     margin: 1rem 5rem;
     padding: .5rem;
     display: inline-block;
@@ -171,7 +196,7 @@ label{
     position: relative;
 }
 
-label:before{
+.flex-gal label:before{
     content: "";
     width: 1rem;
     height: 1rem;
@@ -263,9 +288,62 @@ h1{
     font-size: 3rem;
 }
 
+.toggle-menu-c:checked ~ ul{
+    left: 0;
+}
+
+
+.nav-menu{
+    flex-direction: column wrap;
+    justify-content: flex-start;
+}
+
+.nav-menu ul{
+    background: white;
+    position: fixed;
+    left: -75%;
+    top: 0;
+    bottom: 0;
+    width: 75%;
+    transition: .3s;
+    z-index: 99;
+}
+
+.nav-menu li{
+    display: block;
+    padding: .5rem;
+}
+
+.nav-menu li:hover{
+    background: lightgray;
+}
+
 .a-menu{
-    width: 2.3rem;
-    height: 2.3rem;
+    border-radius: 0;
+    /* display: inline-block; */
+    width: 100%;
+    justify-content: flex-start;
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+
+/* .a-menu::before{
+    content: "\02192";
+
+} */
+
+.tooltip{
+    position: static;
+    display: block;
+    background: none;
+    width: auto;
+    color: black;
+    font-weight: 400;
+}
+
+.tooltip::before{
+    display: none;
 }
 
 .flex-gal{
