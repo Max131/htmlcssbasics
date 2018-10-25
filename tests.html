@@ -58,10 +58,10 @@
 		list-style-type: none;
 		background-color: black;
 		padding-top: 1rem;
-		width: 100%;
+		width: 70%;
 		top: 0;
 		bottom: 0;
-		left: -101%;
+		left: -71%;
 		transition: .35s ease-out;
 		z-index: 100;
 		opacity: .8;
@@ -77,18 +77,38 @@
 		font-size: 3rem;
 		outline: none;
 		opacity: .7;
+		transition: .25s;
 	}
 
 	.closem{
 		position: absolute;
-		top: 0;
-		right: 1rem;
+		top: .25rem;
+		right: -4.5rem;
 		font-size: 3rem;
 		outline: none;
+		display: none!important;
+		z-index: 99;
+	}
+
+	.closem::after{
+		content: "";
+		position: fixed;
+		width: 30%;
+		height: 100%;
+		right: 0;
+		cursor: default;
 	}
 
 	.menu1:target{
 		left: 0;
+	}
+
+	.menu1:target .closem{
+		display: inline-block!important;
+	}
+
+	.menu1:target + .toggle{
+		display: none;
 	}
 
 	.menu2{
