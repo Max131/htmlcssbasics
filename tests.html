@@ -74,6 +74,7 @@
 	.toggle{
 		position: fixed;
 		right: 1rem;
+		top: 0;
 		font-size: 3rem;
 		outline: none;
 		opacity: .7;
@@ -81,9 +82,9 @@
 	}
 
 	.closem{
-		position: absolute;
+		position: fixed;
 		top: .25rem;
-		right: -4.5rem;
+		right: 1rem;
 		font-size: 3rem;
 		outline: none;
 		display: none!important;
@@ -107,7 +108,7 @@
 		display: inline-block!important;
 	}
 
-	.menu1:target + .toggle{
+	.menu1:target .toggle{
 		display: none;
 	}
 
@@ -137,12 +138,12 @@
 		
 		<nav>
 			<ul id="mainmenu1" class="menu1">
+				<li><a href="#mainmenu1" class="toggle">&equiv;</a></li>
 				<li><a href="##" class="closem">&Cross;</a></li>
 				<li><a href="#one">One</a></li>
 				<li><a href="#two">Two</a></li>
 				<li><a href="#three">Three</a></li>
 			</ul>
-			<a href="#mainmenu1" class="toggle">&equiv;</a>
 		</nav>
 		<h2>Hello</h2>
 		<p id="one">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium ipsa maiores reprehenderit quam quibusdam neque incidunt culpa ex labore? Impedit enim illum dolores quasi hic, eius autem excepturi qui corporis</p>
