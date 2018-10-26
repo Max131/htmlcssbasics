@@ -97,7 +97,7 @@
 		width: 30%;
 		height: 100%;
 		right: 0;
-		cursor: default;
+		cursor: pointer;
 	}
 
 	.menu1:target{
@@ -133,7 +133,65 @@
 	}
 
 	.menu3{
-		list-style-position: inside;
+		display: flex;
+		justify-content: center;
+		flex-flow: row wrap;
+		list-style-type: none;
+		counter-reset: numeration;
+	}
+
+	.menu3 li{
+		margin: .5rem;
+	}
+
+	.menu3 a{
+		outline: none;
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+
+	.menu3 .tooltip{
+		padding: .5rem;
+		background: black;
+		border-radius: .25rem;
+		opacity: .7;
+		position: absolute;
+		top: 3.7rem;
+		display: none;
+	}
+
+	.menu3 .tooltip::before{
+		position: absolute;
+		content: "";
+		top: -.7rem;
+		height: .25rem;
+		width: .25rem;
+		border: .35rem solid transparent;
+		border-bottom-color: black;
+	}
+
+	.menu3 a::before{
+		display: block;
+		color:white;
+		height: 3rem;
+		width: 3rem;
+		border: 1px dashed white;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		counter-increment: numeration;
+		content: counter(numeration);
+	}
+
+	.menu3 a:hover::before{
+		box-shadow: 0 0 .25rem white ;
+	}
+
+	.menu3 a:hover .tooltip{
+		display: flex;
+		justify-content: center;
 	}
 	</style>
   </head>
@@ -151,12 +209,12 @@
 		<h2>Hello</h2>
 		<nav>
 			<ul id="mainmenu3" class="menu3">
-				<li><a href="#">One</a></li>
-				<li><a href="#">Two</a></li>
-				<li><a href="#">Three</a></li>
-				<li><a href="#">Four</a></li>
-				<li><a href="#">Five</a></li>
-				<li><a href="#">Six</a></li>
+				<li><a href="#"><span class="tooltip">One</span></a></li>
+				<li><a href="#"><span class="tooltip">Two</span></a></li>
+				<li><a href="#"><span class="tooltip">Three</span></a></li>
+				<li><a href="#"><span class="tooltip">Four</span></a></li>
+				<li><a href="#"><span class="tooltip">Five</span></a></li>
+				<li><a href="#"><span class="tooltip">Six</span></a></li>
 			</ul>
 		</nav>
 		<p id="one">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium ipsa maiores reprehenderit quam quibusdam neque incidunt culpa ex labore? Impedit enim illum dolores quasi hic, eius autem excepturi qui corporis</p>

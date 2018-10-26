@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+  <head>
+    <title>M13</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet" /> 
+	<style>
+	*, *:before, *:after{
+		margin:0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+		
+	html{
+		font-family: 'Source Sans Pro', Helvetica, sans-serif;
+		font-weight: 200;
+		font-size: 20px;
+		scroll-behavior: smooth;
+	}
+
+	body
+	{
+		background-color: #222;
+		color: white;
+		margin: 0 auto;
+		margin-bottom: 2rem;
+	}
+
+	h2{
+		text-align: center;
+		padding-top: 1rem;
+	}
+	
+	p{
+		padding: 1rem;
+	}
+
+	a{
+		font-weight: bold;
+		text-decoration: none;
+		color: lightcoral
+	}
+
+	
+	.menu1 a{
+		padding-left: 1rem;
+		color: white;
+		display: block;
+	}
+
+	.menu1 a:hover:not(.closem):not(.toggle){
+		text-decoration: underline wavy white;
+	}
+
+	.menu1{
+		position: fixed;
+		list-style-type: none;
+		background-color: black;
+		padding-top: 1rem;
+		width: 70%;
+		top: 0;
+		bottom: 0;
+		left: -71%;
+		transition: .35s ease-out;
+		z-index: 100;
+		opacity: .8;
+	}
+	
+	.menu1 li{
+		margin: 1rem 0;
+	}
+	
+	.toggle{
+		position: fixed;
+		right: 1rem;
+		top: 0;
+		font-size: 3rem;
+		outline: none;
+		opacity: .7;
+		transition: .25s;
+	}
+
+	.closem{
+		position: fixed;
+		top: .25rem;
+		right: 1rem;
+		font-size: 3rem;
+		outline: none;
+		display: none!important;
+		z-index: 99;
+	}
+
+	.closem::after{
+		content: "";
+		position: fixed;
+		width: 30%;
+		height: 100%;
+		right: 0;
+		cursor: pointer;
+	}
+
+	.menu1:target{
+		left: 0;
+	}
+
+	.menu1:target .closem{
+		display: inline-block!important;
+	}
+
+	.menu1:target .toggle{
+		display: none;
+	}
+
+	.menu2{
+		list-style-type: none;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		margin-bottom: .25rem;
+	}
+
+	.menu2 li{
+		display:inline-block;
+		min-width: 32%;
+		background-color: #444;
+		border-radius: .25rem;
+	}
+
+	.menu2 a{
+		display: block;
+	}
+
+	.menu3{
+		display: flex;
+		justify-content: center;
+		flex-flow: row wrap;
+		list-style-type: none;
+		counter-reset: numeration;
+	}
+
+	.menu3 li{
+		margin: .5rem;
+	}
+
+	.menu3 a{
+		outline: none;
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+
+	.menu3 .tooltip{
+		padding: .5rem;
+		background: black;
+		border-radius: .25rem;
+		opacity: .7;
+		position: absolute;
+		top: 3.7rem;
+		display: none;
+	}
+
+	.menu3 .tooltip::before{
+		position: absolute;
+		content: "";
+		top: -.7rem;
+		height: .25rem;
+		width: .25rem;
+		border: .35rem solid transparent;
+		border-bottom-color: black;
+	}
+
+	.menu3 a::before{
+		display: block;
+		color:white;
+		height: 3rem;
+		width: 3rem;
+		border: 1px dashed white;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		counter-increment: numeration;
+		content: counter(numeration);
+	}
+
+	.menu3 a:hover::before{
+		box-shadow: 0 0 .25rem white ;
+	}
+
+	.menu3 a:hover .tooltip{
+		display: flex;
+		justify-content: center;
+	}
+	</style>
+  </head>
+	<body>
+		
+		<nav>
+			<ul id="mainmenu1" class="menu1">
+				<li><a href="#mainmenu1" class="toggle">&equiv;</a></li>
+				<li><a href="##" class="closem">&Cross;</a></li>
+				<li><a href="#one">One</a></li>
+				<li><a href="#two">Two</a></li>
+				<li><a href="#three">Three</a></li>
+			</ul>
+		</nav>
+		<h2>Hello</h2>
+		<nav>
+			<ul id="mainmenu3" class="menu3">
+				<li><a href="#"><span class="tooltip">One</span></a></li>
+				<li><a href="#"><span class="tooltip">Two</span></a></li>
+				<li><a href="#"><span class="tooltip">Three</span></a></li>
+				<li><a href="#"><span class="tooltip">Four</span></a></li>
+				<li><a href="#"><span class="tooltip">Five</span></a></li>
+				<li><a href="#"><span class="tooltip">Six</span></a></li>
+			</ul>
+		</nav>
+		<p id="one">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium ipsa maiores reprehenderit quam quibusdam neque incidunt culpa ex labore? Impedit enim illum dolores quasi hic, eius autem excepturi qui corporis</p>
+		<p id="two">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium ipsa maiores reprehenderit quam quibusdam neque incidunt culpa ex labore? Impedit enim illum dolores quasi hic, eius autem excepturi qui corporis</p>
+		<p id="three">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium ipsa maiores reprehenderit quam quibusdam neque incidunt culpa ex labore? Impedit enim illum dolores quasi hic, eius autem excepturi qui corporis</p>
+		<p id="four">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium ipsa maiores reprehenderit quam quibusdam neque incidunt culpa ex labore? Impedit enim illum dolores quasi hic, eius autem excepturi qui corporis</p>
+		<p id="five">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium ipsa maiores reprehenderit quam quibusdam neque incidunt culpa ex labore? Impedit enim illum dolores quasi hic, eius autem excepturi qui corporis</p>
+		<p id="six">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium ipsa maiores reprehenderit quam quibusdam neque incidunt culpa ex labore? Impedit enim illum dolores quasi hic, eius autem excepturi qui corporis</p>
+		<nav>
+			<ul id="mainmenu2" class="menu2">
+				<li><a href="#four">&larr;</a></li>
+				<li><a href="#five">&equiv;</a></li>
+				<li><a href="#six">&rarr;</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>
