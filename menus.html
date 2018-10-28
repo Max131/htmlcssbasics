@@ -39,14 +39,14 @@
 	a{
 		font-weight: bold;
 		text-decoration: none;
-		color: lightcoral
+		color: lightcoral;
+		display: block;
 	}
 
 	
-	.menu1 a{
+	.menu1 a:not(.closem)not:not(.toggle){
 		padding-left: 1rem;
 		color: white;
-		display: block;
 	}
 
 	.menu1 a:hover:not(.closem):not(.toggle){
@@ -58,37 +58,37 @@
 		list-style-type: none;
 		background-color: black;
 		padding-top: 1rem;
-		width: 70%;
+		width: calc(100% - 5rem);
 		top: 0;
 		bottom: 0;
-		left: -71%;
-		transition: .35s ease-out;
+		left: calc(-100% - 5rem);
 		z-index: 100;
 		opacity: .8;
+		transition: .35s ease;
 	}
 	
 	.menu1 li{
 		margin: 1rem 0;
+		padding-left: 1rem;
 	}
 	
-	.toggle{
+	.toggle, .closem{
 		position: fixed;
-		right: 1rem;
-		top: 0;
-		font-size: 3rem;
+		right: .5rem;
+		top: .5rem;
+		font-size: 2rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		color: red;
+		background-color: black;
+		border-radius: .25rem;
 		outline: none;
-		opacity: .7;
-		transition: .25s;
+		line-height: 1.25;
+		text-align: center;
 	}
 
 	.closem{
-		position: fixed;
-		top: .25rem;
-		right: 1rem;
-		font-size: 3rem;
-		outline: none;
-		display: none!important;
-		z-index: 99;
+		display: none;
 	}
 
 	.menu1:target{
@@ -96,7 +96,17 @@
 	}
 
 	.menu1:target .closem{
-		display: inline-block!important;
+		display: inline-block;
+		line-height: 1.25;
+	}
+
+	.menu1:target .closem::after{
+		content: "";
+		position: fixed;
+		width: 5rem;
+		height: 100%;
+		right: 0;
+		top: 0;
 	}
 
 	.menu1:target .toggle{
@@ -117,10 +127,11 @@
 		min-width: 32%;
 		background-color: #444;
 		border-radius: .25rem;
+		height: 2rem;
+		line-height: 2;
 	}
 
 	.menu2 a{
-		display: block;
 	}
 
 	.menu3{
@@ -163,7 +174,6 @@
 	}
 
 	.menu3 a::before{
-		display: block;
 		color:white;
 		height: 3rem;
 		width: 3rem;
