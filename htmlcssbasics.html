@@ -31,10 +31,35 @@
         </ul>
     </nav>
     
-    <section id="videobg" class="container">
+    <section id="videobg" class="container video-bg">
         <h1>Video Background!</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam error nesciunt provident debitis harum, suscipit molestiae sunt tempore ab, necessitatibus illum accusamus maiores? Ad aliquid omnis, aperiam doloremque natus quam?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus repellendus eum fugit! Placeat consequuntur ipsa odio, ratione aperiam commodi! Nulla alias in esse iure cumque, laborum beatae natus tempora incidunt.</p>
+        <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam error nesciunt provident debitis harum, suscipit molestiae sunt tempore ab, necessitatibus illum accusamus maiores? Ad aliquid omnis, aperiam doloremque natus quam?</p> -->
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus repellendus eum fugit! Placeat consequuntur ipsa odio, ratione aperiam commodi! Nulla alias in esse iure cumque, laborum beatae natus tempora incidunt.</p> -->
+        <pre><code>
+        &lt;html&gt;
+            &lt;div class="video-container"&gt;
+                &lt;video loop muted autoplay poster="assets/poster.png" class="bg-video"&gt;
+                    &lt;source src="assets/outdoors.ogv" type="video/ogg"&gt;
+                    &lt;source src="assets/outdoors.mp4" type="video/mp4"&gt;
+                &lt;/video&gt;
+            &lt;/div&gt;
+            
+        {CSS}
+        .video-container {
+            background: #2c2c2c url('bg.png') repeat;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            z-index: -100;
+        }
+        
+        .bg-video {
+        width: 100%;
+        height: 100%;
+        opacity: .1;
+        }
+        </code></pre>
     </section>
     <section  id="parallax" class="parallax2 container">
         <h1>Parallax!</h1>
@@ -45,19 +70,8 @@
     <section id="clippath" class="parallax3 container">
         <h1>ClipPath!</h1>
     </section>
-    <section id="flexb" class="container">
+    <section id="flexb" class="container gallery">
         <h1>Flexbox!</h1>
-        <div class="flex-gal">
-            <input type="radio" name="sel-order" id="gal-r" checked />
-            <label for="gal-r">Row</label>
-            <input type="radio" name="sel-order" id="gal-rr" />
-            <label for="gal-rr">Reverse Row</label>
-            <input type="radio" name="sel-order" id="gal-c" />
-            <label for="gal-c">Column</label>
-            <input type="radio" name="sel-order" id="gal-cr" />
-            <label for="gal-cr">Column Reverse</label>
-            
-            <section class="gallery">
                 <figure>
                     <img src="assets/cabains.jpg" alt="" />
                 </figure>
@@ -76,8 +90,21 @@
                 <figure>
                     <img src="assets/dandelion.jpg" alt="" />
                 </figure>
-            </section>
-        </div>
+                <figure>
+                    <img src="assets/cabains.jpg" alt="" />
+                </figure>
+                <figure>
+                    <img src="assets/girl.jpg" alt="" />
+                </figure>
+                <figure>
+                    <img src="assets/log.jpg" alt="" />
+                </figure>
+                <figure>
+                    <img src="assets/lotus.jpg" alt="" />
+                </figure>
+                <figure>
+                    <img src="assets/milkyway.jpg" alt="" />
+                </figure>
     </section>
     <section class="parallax4 container">
         <h1 class="letterpress">Letterpress!</h1>
