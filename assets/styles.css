@@ -40,6 +40,8 @@ height: 100%;
 opacity: .1;
 }
 
+    /* content: "\2261"; */
+
 .nav-menu{
     padding: 1rem;
     display: flex;
@@ -47,54 +49,46 @@ opacity: .1;
     justify-content: center;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+}
+
+.nav-menu ul{
+    list-style-type: none;
+}
+
+.nav-menu li{
+    display: inline-block;
+    margin: .25rem;
 }
 
 .a-menu{
-        background-color: lightgray;
-        color: black;
-        display: inline-block;
-        width: 3rem;
-        height: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 1rem;
-        border-radius: 50%;
+        color: white;
+        display: block;
+        padding: .5rem 1rem;
         text-decoration: none;
-        border: 1px dashed black;
-        box-shadow: 0 0 0 2px lightgray;
         outline: none;
-        transition: .25s;
-        position: relative;
+        border-bottom: .25rem solid white;
+        transition: .5s;
     }
 
-.tooltip{
+.a-menu:hover{
+    border-bottom-color: red;
+}
+
+
+.toggle-menu, .close-menu{
     display: none;
-    position: absolute;
-    background-color: black;
+    position: fixed;
+    text-decoration: none;
     color: white;
-    padding: .5rem;
+    background-color: black;
+    opacity: .8;
     border-radius: .5rem;
-    opacity: .7;
-    top: 4rem;
-}
-
-.tooltip:before{
-    content: "";
-    position: absolute;
-    top:-1rem;
-    border-left: .5rem solid transparent;
-    border-right: .5rem solid transparent;
-    border-top: .5rem solid transparent;
-    border-bottom: .5rem solid black;
-}
-
-.a-menu:hover .tooltip{
-    display: flex;
+    font-size: 3rem;
     justify-content: center;
-    z-index: 100;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .back-up{
@@ -107,7 +101,7 @@ opacity: .1;
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    z-index: 100;
+    z-index: 900;
     transition: .25s;
 }
 
@@ -130,6 +124,9 @@ opacity: .1;
     align-items: center;
 }
 
+.video-bg h1{
+    margin-top: 6rem;
+}
 
 .parallax1, .parallax2, .parallax3, .parallax4 {
     background: #2c2c2c url() no-repeat fixed center;
@@ -151,87 +148,61 @@ opacity: .1;
     text-shadow: 1px 1px 0px #444;
 }
 
-/* Flexbox Gallery */
-
-.flex-gal{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-flow: column wrap;
-    max-height: 65vh;
-}
-
-label{
-    margin: 1rem 5rem;
-    padding: .5rem;
-    display: inline-block;
-    cursor: pointer;
-    height: 3rem;
-    position: relative;
-}
-
-label:before{
-    content: "";
-    width: 1rem;
-    height: 1rem;
-    border: 1px dashed gray;
-    border-radius: 50%;
-    position: absolute;
-    left: -1.25rem;
-    top: .8rem;
-}
-
-input[type="radio"]{
-    display: none;
-}
-
-input[type="radio"]:checked+label:before{
-    background-color: gray;
-    border: 2px solid lightgray;
-}
-
-#gal-r:checked ~ .gallery {
-    flex-direction: row;
-}
-
-#gal-rr:checked ~ .gallery {
-    flex-direction: row-reverse;
-}
-
-#gal-c:checked ~ .gallery {
-    flex-direction: column;
-    align-items: center;
-}
-
-#gal-cr:checked ~ .gallery {
-    flex-direction: column-reverse;
-    align-items: center;
-
-}
-
 .gallery{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 50%;
-    max-height: 500px;
-    margin: 1rem;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: flex-start;
+    max-height: 100vh;
+    margin: 0 auto;
+}
+
+.gallery figure{
+    background-color: lightyellow;
+    padding: .25rem;
+    max-width: 15%;
+    margin: .5rem;
+    display: flex;
+    flex-flow: column wrap;
+    overflow: hidden;
 }
 
 .gallery img{
-    width: 200px;
-    height: 133px;
     max-width: 100%;
-    max-height: auto;
-    margin: 10px;
-    border-radius: 5px;
-    transition: .3s ease-in-out;
+    height: auto;
+}
+
+.gallery figcaption{
+    color: black;
+    text-align: center;
+
+}
+
+.gallery a{
+    color: black;
+    text-decoration: underline dotted;
+    display: block;
 }
 
 .gallery img:hover{
-    box-shadow: 0 0 4px 8px #00000050;
-    cursor: pointer;
-    transform: scale(2);
+    transform: scale(2.5);
+    transition: .3s;
+}
+
+pre code{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: #1E90FF50;
+    color: white;
+    border-radius: .25rem;
+    display: block;
+    /* white-space: pre-wrap; */
+    /* word-wrap: break-word; */
+    min-width: 50vw;
+    max-width: 90vw;
+    overflow-x: auto;
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -252,7 +223,7 @@ height: 100%;
 
 }
 
-@media (max-width: 640px){
+@media (max-width: 800px){
 
 html{
     font-size: .8rem;
@@ -262,26 +233,89 @@ h1{
     font-size: 3rem;
 }
 
-.a-menu{
-    width: 2.3rem;
-    height: 2.3rem;
+.toggle-menu{
+    display: flex;
 }
 
-.flex-gal{
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    max-height: 40%;
+.nav-menu{
+    position: fixed;
+    display: initial;
+    background: black;
+    opacity: .8;
+    width: calc(100% - 5rem);
+    left: -100%;
+    height: 100%;
+    z-index: 100;
+    transition: .5s;
 }
+
+.nav-menu li{
+    display: block;
+    width: 100%;
+}
+
+.nav-menu a{
+    border-bottom: none;
+    font-weight: bold;
+}
+
+.nav-menu a:hover:not(.toggle-menu):not(.close-menu){
+    color: red;
+}
+
+.toggle-menu, .close-menu{
+    right: .75rem;
+    top: .75rem;
+    outline: none;
+}
+
+.nav-menu:target{
+    left: 0;
+}
+
+.nav-menu:target .toggle-menu{
+    display: none;
+}
+
+.nav-menu:target .close-menu{
+    display: flex;
+    color: red;
+}
+
+.nav-menu:target .close-menu::after{
+    content: "";
+    position: fixed;
+    width: 5rem;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
 
 .gallery{
-    width: 100%;
-    display: flex;
-    flex-flow: column-wrap;
-    height: 40%;
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+    max-height: 110vh;
 }
 
-.gallery img{
-    width: 75px;
-    height: auto;
+.gallery figure{
+    max-width: 30%;
+    padding: .15rem;
+    margin: .3rem;
+    font-size: .8rem;
 }
+
+
+}   
+
+@media screen and (max-width: 800px) and (orientation: landscape){
+.gallery {
+    max-height: 370vh;
+}
+
+.gallery figure{
+    max-width: 30%;
+}
+
+
 }
