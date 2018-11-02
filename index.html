@@ -18,18 +18,48 @@
     <div class="back-up">
         <a href="#up-menu" title="back to up">&uarr;</a>
     </div>
-    <nav id="up-menu" class="nav-menu">
-        <a href="#videobg" class="a-menu">1<span class="tooltip">Video Background</span></a>
-        <a href="#parallax" class="a-menu">2<span class="tooltip">Parallax</span></a>
-        <a href="#letterpress" class="a-menu">3<span class="tooltip">Letterpress</span></a>
-        <a href="#clippath" class="a-menu">4<span class="tooltip">ClipPath</span></a>
-        <a href="#flexb" class="a-menu">5<span class="tooltip">Flexbox Gallery</span></a>
-        <a href="#bye" class="a-menu">6<span class="tooltip">Bye Bye!</span></a>
+    <nav id="up-menu">
+        <ul id="main-menu" class="nav-menu">
+            <li><a href="#main-menu" class="toggle-menu">&#9776;</a></li>
+            <li><a href="##" class="close-menu">&Cross;</a></li>
+            <li><a href="#videobg" class="a-menu">Video Background</a></li>
+            <li><a href="#parallax" class="a-menu">Parallax</a></li>
+            <li><a href="#letterpress" class="a-menu">Letterpress</a></li>
+            <li><a href="#clippath" class="a-menu">ClipPath</a></li>
+            <li><a href="#flexb" class="a-menu">Flexbox Gallery</a></li>
+            <li><a href="#bye" class="a-menu">Bye Bye!</a></li>
+        </ul>
     </nav>
-    <section class="container">
+    
+    <section id="videobg" class="container video-bg">
         <h1>Video Background!</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam error nesciunt provident debitis harum, suscipit molestiae sunt tempore ab, necessitatibus illum accusamus maiores? Ad aliquid omnis, aperiam doloremque natus quam?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus repellendus eum fugit! Placeat consequuntur ipsa odio, ratione aperiam commodi! Nulla alias in esse iure cumque, laborum beatae natus tempora incidunt.</p>
+        <!-- <pre><code>
+        &lt;html&gt;
+            &lt;div class="video-container"&gt;
+                &lt;video loop muted autoplay poster="assets/poster.png" class="bg-video"&gt;
+                    &lt;source src="assets/outdoors.ogv" type="video/ogg"&gt;
+                    &lt;source src="assets/outdoors.mp4" type="video/mp4"&gt;
+                &lt;/video&gt;
+            &lt;/div&gt;
+            
+        {CSS}
+        .video-container {
+            background: #2c2c2c url('bg.png') repeat;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            z-index: -100;
+        }
+        
+        .bg-video {
+        width: 100%;
+        height: 100%;
+        opacity: .1;
+        }
+        </code></pre> -->
     </section>
     <section  id="parallax" class="parallax2 container">
         <h1>Parallax!</h1>
@@ -42,36 +72,22 @@
     </section>
     <section id="flexb" class="container">
         <h1>Flexbox!</h1>
-        <div class="flex-gal">
-            <input type="radio" name="sel-order" id="gal-r" checked />
-            <label for="gal-r">Row</label>
-            <input type="radio" name="sel-order" id="gal-rr" />
-            <label for="gal-rr">Reverse Row</label>
-            <input type="radio" name="sel-order" id="gal-c" />
-            <label for="gal-c">Column</label>
-            <input type="radio" name="sel-order" id="gal-cr" />
-            <label for="gal-cr">Column Reverse</label>
             <section class="gallery">
-                <figure>
-                    <img src="assets/cabains.jpg" alt="" />
-                </figure>
-                <figure>
-                    <img src="assets/girl.jpg" alt="" />
-                </figure>
-                <figure>
-                    <img src="assets/log.jpg" alt="" />
-                </figure>
-                <figure>
-                    <img src="assets/lotus.jpg" alt="" />
-                </figure>
-                <figure>
-                    <img src="assets/milkyway.jpg" alt="" />
-                </figure>
-                <figure>
-                    <img src="assets/dandelion.jpg" alt="" />
-                </figure>
-            </section>
-        </div>
+                <figure><img src="assets/cabains.jpg" /><figcaption>Cabains</figcaption></figure>
+                <figure><img src="assets/girl.jpg" /><figcaption>Girl</figcaption></figure>
+                <figure><img src="assets/coffee.jpg" /><figcaption>Coffee</figcaption></figure>
+                <figure><img src="assets/log.jpg" /><figcaption>Log</figcaption></figure>
+                <figure><img src="assets/stork.jpg" /><figcaption><a href="assets/stork.jpg" download="garza.jpg">Stork</a></figcaption></figure>
+                <figure><img src="assets/thunderstorm.jpg" /><figcaption>Thunderstorm</figcaption></figure>
+                <figure><img src="assets/castle.jpg" /><figcaption>Castle</figcaption></figure>
+                <figure><img src="assets/dandelion.jpg" /><figcaption>Dandelion</figcaption></figure>
+                <figure><img src="assets/lotus.jpg" /><figcaption>Lotus</figcaption></figure>
+                <figure><img src="assets/milkyway.jpg" /><figcaption>Milkyway</figcaption></figure>
+                <figure><img src="assets/hot-air-ballon.jpg" /><figcaption>Air Ballon</figcaption></figure>
+                <figure><img src="assets/lavender.jpg" /><figcaption>Lavender</figcaption></figure>
+                <figure><img src="assets/lighthouse.jpg" /><figcaption>Lighthouse</figcaption></figure>
+                <figure><img src="assets/dandelion2.jpg" /><figcaption>Coulored Dandelion</figcaption></figure>
+        </section>
     </section>
     <section class="parallax4 container">
         <h1 class="letterpress">Letterpress!</h1>
