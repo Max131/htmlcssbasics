@@ -73,6 +73,7 @@ opacity: .1;
 
 .a-menu:hover{
     background-color: #00000070;
+    border-bottom: 2px solid red;
 }
 
 
