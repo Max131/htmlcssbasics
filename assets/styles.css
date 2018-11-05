@@ -46,6 +46,8 @@ opacity: .1;
     justify-content: center;
     align-items: center;
     padding-top: .5rem;
+    position: absolute;
+    width: 100%;
     /* background-image: linear-gradient(gray, rgb(54, 54, 54)); */
 }
 
@@ -298,3 +300,10 @@ h1{
     bottom: 0;
 }
 
+.gallery{
+    /* height: auto; */
+
+}
+
+.gallery figure{
+}
